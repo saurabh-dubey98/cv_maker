@@ -1,13 +1,213 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #1F1D36;
+  --secondary-color: #3F3351;
+  --primary-bg-color: #C996CC;
+  --secondary-bg-color: #916BBF;
+  --button-bg-color: #1597E5;
+  --box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  --font: 'Rubik', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  margin: 2px;
+  background-color: var(--button-bg-color);
+  color: whitesmoke;
+  font-family: var(--font);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: .2s;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  color: whitesmoke;
+}
+
+.delete {
+  background-color: #c51f51;
+}
+
+.save {
+  background-color: #5fd148;
+}
+
+.heading {
+  font-size: 20px;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* text-decoration: underline; */
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 30px;
+  margin: 20px 0;
+  text-align: center;
+  text-shadow: var(--box-shadow);
+}
+
+header h1 span {
+  color: #1597E5;
+}
+
+span{
+  color: #1597E5;
+}
+
+.main-content-container {
+  margin: 0 auto 50px auto;
+  width: 90%;
+  max-width: 700px;
+  padding: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;;
+}
+
+.save-btn {
+  display: block;
+  margin: 30px auto 10px auto;
+  background-color: #FF5151;
+}
+
+.add-new-form {
+  display: block;
+  margin: 20px auto 40px auto;
+  background: none;
+  border: 2px solid var(--secondary-color);
+  color: var(--primary-color);
+}
+.add-new-form:hover {
+  border-color: rgba(76, 49, 109, 0.8);
+  color: var(--primary-color);
+}
+
+section {
+  transition: .7s;
+}
+
+/* General Info section */
+form label,
+form input {
+  display: block;
+}
+
+form label {
+  margin-top: 10px;
+  font-size: 18px
+}
+
+form input {
+  margin-bottom: 10px;
+  margin-top: 3px;
+  padding: 8px 10px;
+  width: 100%;
+  outline: none;
+  font-family: var(--font);
+  font-size: 18px;
+  border: 1px solid rgb(212, 201, 201);
+  border-radius: 5px;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+/* Educational Info */
+.edu-info {
+  margin-top: 40px;
+}
+
+/* Work Info */
+.work-info {
+  margin-top: 40px;
+}
+
+article {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.edit-del-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+article .edit-btn {
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+article .edit-btn i {
+  color: #1597E5;
+}
+
+article .del-btn {
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+  
+}
+article .del-btn i {
+  color: #FF5151;
+}
+
+
+@media screen and (min-width: 768px) {
+  header h1 {
+    font-size: 60px;
+  }
+  .heading {
+    font-size: 22px;
+  }
+  .btn {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+  .btn-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .btn-container button {
+    margin: 0 10px;
+  }
+  article .edit-btn {
+    font-size: 20px;
+  }
+
+  article .del-btn {
+    font-size: 20px;
+  }
 }
